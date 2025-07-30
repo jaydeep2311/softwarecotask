@@ -1,0 +1,381 @@
+/* Import Projects.css for shared styles */
+@import './Projects.css';
+
+/* Estimate Form Container */
+.estimate-form-container {
+  padding: 24px;
+  flex: 1;
+  background-color: #f8fafc;
+}
+
+.estimate-form {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Estimate Table */
+.estimate-table {
+  margin-bottom: 32px;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.8fr 0.8fr 1fr 1fr 80px;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #f8fafc;
+  border-radius: 8px 8px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Column headers */
+.col-item,
+.col-description,
+.col-unit,
+.col-quantity,
+.col-price,
+.col-margin,
+.col-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Estimate Sections */
+.estimate-section {
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  margin-bottom: 16px;
+}
+
+.estimate-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-header {
+  display: grid;
+  grid-template-columns: 40px 1fr auto auto;
+  gap: 12px;
+  padding: 16px;
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  align-items: center;
+}
+
+.section-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.section-name-input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  padding: 4px 0;
+  flex: 1;
+}
+
+.section-name-input:focus {
+  outline: none;
+  background-color: white;
+  border: 1px solid #4f46e5;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.section-total {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: right;
+}
+
+.section-currency {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-left: 4px;
+}
+
+/* Estimate Rows */
+.estimate-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.8fr 0.8fr 1fr 1fr 80px;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  align-items: center;
+}
+
+.estimate-row:last-child {
+  border-bottom: none;
+}
+
+.estimate-row:hover {
+  background-color: #f8fafc;
+}
+
+/* Item Inputs */
+.item-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1f2937;
+  background-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.item-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Action Buttons */
+.col-actions {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.add-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #059669;
+}
+
+.remove-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.remove-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Estimate Totals */
+.estimate-totals {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+  background-color: #f8fafc;
+  margin-bottom: 32px;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.total-row:last-child {
+  border-bottom: none;
+}
+
+.total-row.final-total {
+  font-weight: 600;
+  font-size: 16px;
+  color: #1f2937;
+  border-top: 2px solid #4f46e5;
+  padding-top: 12px;
+  margin-top: 8px;
+}
+
+.total-label {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.total-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.final-total .total-label,
+.final-total .total-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .table-header,
+  .estimate-row {
+    grid-template-columns: 0.8fr 1.5fr 0.6fr 0.6fr 0.8fr 0.8fr 60px;
+    gap: 8px;
+  }
+  
+  .estimate-form {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .table-header,
+  .estimate-row {
+    grid-template-columns: 1fr 1.5fr 0.8fr 0.8fr 1fr 1fr 60px;
+    gap: 6px;
+    font-size: 12px;
+  }
+  
+  .item-input {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .estimate-form-container {
+    padding: 16px;
+  }
+  
+  .estimate-form {
+    padding: 20px;
+    overflow-x: auto;
+  }
+  
+  .estimate-table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .estimate-form-container {
+    padding: 12px;
+  }
+  
+  .estimate-form {
+    padding: 16px;
+  }
+  
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .section-header {
+    grid-template-columns: 30px 1fr auto auto;
+    padding: 12px;
+  }
+  
+  .section-number {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+  
+  .estimate-totals {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 16px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .table-header {
+    display: none;
+  }
+  
+  .estimate-row {
+    display: block;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .estimate-row > div {
+    margin-bottom: 12px;
+  }
+  
+  .estimate-row > div:last-child {
+    margin-bottom: 0;
+  }
+  
+  .col-item::before { content: "Item: "; font-weight: 600; }
+  .col-description::before { content: "Description: "; font-weight: 600; }
+  .col-unit::before { content: "Unit: "; font-weight: 600; }
+  .col-quantity::before { content: "Quantity: "; font-weight: 600; }
+  .col-price::before { content: "Price: "; font-weight: 600; }
+  .col-margin::before { content: "Margin: "; font-weight: 600; }
+}
+
+/* Focus and validation states */
+.item-input:invalid {
+  border-color: #ef4444;
+}
+
+.item-input:valid {
+  border-color: #10b981;
+}
+
+/* Loading states */
+.item-input:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
